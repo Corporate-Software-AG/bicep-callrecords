@@ -1,0 +1,3 @@
+[submodule "azfunction-callrecords"]
+	path = azfunction-callrecords
+	url = https://github.com/Corporate-Software-AG/azfunction-callrecords.git
