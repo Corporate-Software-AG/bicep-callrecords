@@ -1,1 +1,26 @@
-coming soon
+# Install Azure CLI
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+# Update Bicep
+az bicep install && az bicep upgrade
+
+export subscriptionName='MPN100'
+export groupName='test-bicep-callrecords2'
+
+az login --use-device-code
+az account show
+az account set --subscription $subscriptionName
+az group create --location switzerlandnorth --name $groupName
+az deployment group what-if --template-file main.bicep --resource-group $groupName --parameters @parameters-bkd.json
+az deployment group create --template-file main.bicep --resource-group $groupName --parameters @parameters-bkd.json
+
+git submodule update --init
+cd azfunction-callrecords
+#npm install typescript 
+#npm i -g azure-functions-core-tools@4 --unsafe-perm true
+
+npm install
+npm run build
+
+func azure functionapp fetch-app-settings <func-name>
+func azure storage fetch-connection-string <strg-name>
+func azure functionapp publish <func-name>

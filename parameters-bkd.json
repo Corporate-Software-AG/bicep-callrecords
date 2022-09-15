@@ -1,0 +1,21 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "functionAppName": {
+            "value": "BFB-***-FUAP-001"
+        },
+        "appSrvPlanName": {
+            "value": "BFB-***-ASPL-001"
+        },
+        "logAnalyticsName": {
+            "value": "BFB-***-LAWS-001"
+        },
+        "appInsightsName": {
+            "value": "BFB-***-AINS-001"
+        },
+        "strgAccName": {
+            "value": "bfb***stac001"
+        }
+    }
+}
