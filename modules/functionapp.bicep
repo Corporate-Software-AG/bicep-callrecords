@@ -3,6 +3,8 @@ param strgAccountName string
 param functionAppName string
 param appSrvPlanName string
 param location string
+param appId string
+param appSecret string
 
 param appInsightsName string
 
@@ -45,11 +47,11 @@ resource functionApp 'Microsoft.Web/sites@2021-03-01' = {
         }
         {
           name: 'APP_ID'
-          value: ''
+          value: appId
         }
         {
           name: 'APP_SECRET'
-          value: ''
+          value: appSecret
         }
         {
           name: 'AzureWebJobsStorage'

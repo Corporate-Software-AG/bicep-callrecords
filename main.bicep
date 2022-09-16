@@ -8,6 +8,10 @@ param appSrvPlanName string = 'appSrvPlan-${uniqueString(resourceGroup().id)}'
 param logAnalyticsName string = 'logAnalytics-${uniqueString(resourceGroup().id)}'
 param appInsightsName string = 'appInsights-${uniqueString(resourceGroup().id)}'
 
+param appId string
+@secure()
+param appSecret string
+
 module storage 'modules/storage.bicep' = {
   name: '${deployment().name}-storage'
   params: {
@@ -33,5 +37,7 @@ module functionapp 'modules/functionapp.bicep' = {
     location: location
     strgAccountName: storage.outputs.strgAccountName
     appInsightsName: monitoring.outputs.appInsightsName
+    appId: appId
+    appSecret: appSecret
   }
 }

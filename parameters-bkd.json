@@ -3,19 +3,25 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "functionAppName": {
-            "value": "BFB-***-FUAP-001"
+            "value": "BFB-CALLREC-FUAP-001"
         },
         "appSrvPlanName": {
-            "value": "BFB-***-ASPL-001"
+            "value": "BFB-CALLREC-ASPL-001"
         },
         "logAnalyticsName": {
-            "value": "BFB-***-LAWS-001"
+            "value": "BFB-CALLREC-LAWS-001"
         },
         "appInsightsName": {
-            "value": "BFB-***-AINS-001"
+            "value": "BFB-CALLREC-AINS-001"
         },
         "strgAccName": {
-            "value": "bfb***stac001"
+            "value": "bfbcallrecstac001"
+        },
+        "appId": {
+            "value": "xyz"
+        },
+        "appSecret": {
+            "value": "xyz"
         }
     }
 }
