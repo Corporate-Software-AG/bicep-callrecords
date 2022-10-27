@@ -3,8 +3,8 @@ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 # Update Bicep
 az bicep install && az bicep upgrade
 
-export subscriptionName='MPN100'
-export groupName='test-bicep-callrecords'
+export subscriptionName='TeamsTelefonie-SUBS'
+export groupName='TeamsTelefonie-RSGR-101'
 
 az login --use-device-code
 az account show
@@ -21,6 +21,6 @@ cd azfunction-callrecords
 npm install
 npm run build
 
-func azure functionapp fetch-app-settings <func-name>
-func azure storage fetch-connection-string <strg-name>
-func azure functionapp publish <func-name>
+func azure functionapp fetch-app-settings TeamsTelefonie-FUAP-101
+func azure storage fetch-connection-string teamstelefoniestac101
+func azure functionapp publish TeamsTelefonie-FUAP-101

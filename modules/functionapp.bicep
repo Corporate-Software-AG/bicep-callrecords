@@ -39,6 +39,7 @@ resource functionApp 'Microsoft.Web/sites@2021-03-01' = {
   properties: {
     serverFarmId: appSrvPlan.id
     siteConfig: {
+      ftpsState: 'FtpsOnly'
       linuxFxVersion: 'NODE|16'
       appSettings: [
         {
@@ -55,10 +56,6 @@ resource functionApp 'Microsoft.Web/sites@2021-03-01' = {
         }
         {
           name: 'AzureWebJobsStorage'
-          value: 'DefaultEndpointsProtocol=https;AccountName=${storage.name};EndpointSuffix=${environment().suffixes.storage};AccountKey=${storage.listKeys().keys[0].value}'
-        }
-        {
-          name: 'CONNECTION_STRING_LAKE'
           value: 'DefaultEndpointsProtocol=https;AccountName=${storage.name};EndpointSuffix=${environment().suffixes.storage};AccountKey=${storage.listKeys().keys[0].value}'
         }
         {

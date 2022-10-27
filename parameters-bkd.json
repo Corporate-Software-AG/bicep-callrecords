@@ -3,25 +3,25 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "functionAppName": {
-            "value": "BFB-CALLREC-FUAP-001"
+            "value": "TeamsTelefonie-FUAP-101"
         },
         "appSrvPlanName": {
-            "value": "BFB-CALLREC-ASPL-001"
+            "value": "TeamsTelefonie-ASPL-101"
         },
         "logAnalyticsName": {
-            "value": "BFB-CALLREC-LAWS-001"
+            "value": "TeamsTelefonie-LAWS-101"
         },
         "appInsightsName": {
-            "value": "BFB-CALLREC-AINS-001"
+            "value": "TeamsTelefonie-AINS-101"
         },
         "strgAccName": {
-            "value": "bfbcallrecstac001"
+            "value": "teamstelefoniestac101"
         },
         "appId": {
-            "value": "xyz"
+            "value": "2283c636-c17f-4973-9ad1-eb09c7cf1d12"
         },
         "appSecret": {
-            "value": "xyz"
+            "value": "QhB8Q~qNd4znDumf6Cxoaz8Vaxrapj_eJCXjWb9o"
         }
     }
 }

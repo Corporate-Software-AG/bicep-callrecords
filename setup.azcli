@@ -14,6 +14,7 @@ az deployment group what-if --template-file main.bicep --resource-group $groupNa
 az deployment group create --template-file main.bicep --resource-group $groupName
 
 git submodule update --init
+(git submodule update --remote)
 cd azfunction-callrecords
 #npm install typescript 
 #npm i -g azure-functions-core-tools@4 --unsafe-perm true
@@ -21,6 +22,6 @@ cd azfunction-callrecords
 npm install
 npm run build
 
-func azure functionapp fetch-app-settings <func-name>
-func azure storage fetch-connection-string <strg-name>
-func azure functionapp publish <func-name>
+func azure functionapp fetch-app-settings funcName-ryddlugh63jmw
+func azure storage fetch-connection-string strgryddlugh63jmw
+func azure functionapp publish funcName-ryddlugh63jmw
